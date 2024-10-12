@@ -4,11 +4,11 @@ visit:
       main:
         description: abre la GUI que permite editar la configuración de la isla predeterminada
           o de destino.
-        parameters: "<jugador>"
+        parameters: "<player>"
     player:
       main:
         description: abre la GUI o visita la isla del jugador seleccionado.
-        parameters: "<jugador>"
+        parameters: "<player>"
       configure:
         description: abre la GUI que permite administrar la configuración de visitas.
       set-location:
@@ -32,13 +32,13 @@ visit:
         description: |-
           &7 Busque un
           &7 isla.
-        search: "&b Valor: [valor]"
+        search: "&b Valor: [value]"
       filter:
         name: "&f &l Filtro"
         description: |-
           &7 Permite mostrar solo
           &7 islas filtradas.
-        value: "&7 Filtro activo: [valor]"
+        value: "&7 Filtro activo: [value]"
         all_islands: "&b &o ninguno"
         online_islands: "&b &o en línea"
         can_visit: "&b &o visitable"
@@ -50,9 +50,9 @@ visit:
           [nadie en línea]
           [pago]
           [sin visita]
-        owner: "&7 &l Propietario: &r &b [jugador]"
+        owner: "&7 &l Propietario: &r &b [player]"
         members-title: "&7 &l Miembros:"
-        member: "&b - [jugador]"
+        member: "&b - [player]"
         unknown: desconocido
         noone-online: |-
           &7 Ninguno de los miembros de la isla
@@ -66,7 +66,7 @@ visit:
         description: |-
           &7 Permite cambiar el pago
           &7 para visitar tu isla.
-          &7 Valor actual: &b &o [número]
+          &7 Valor actual: &b &o [number]
       offline:
         name: "&f &l Visitas sin conexión"
         description: |-
@@ -107,7 +107,7 @@ visit:
         description: |-
           &7 Permite establecer la cantidad de impuestos
           Y 7 para visitar la isla.
-        value: "&7 Impuesto actual: &b &o [número]"
+        value: "&7 Impuesto actual: &b &o [number]"
       default_payment:
         name: "&f &l Pago predeterminado"
         description: |-
@@ -174,7 +174,7 @@ visit:
           &7 por visitar su isla.
           &7 0 o inferior desactiva cualquier
           &7 limitación.
-        value: "&7 Valor máximo: &b&o [número]"
+        value: "&7 Valor máximo: &b&o [number]"
       cancel:
         name: "&f&l Cancelar"
         description: |-
@@ -205,14 +205,10 @@ visit:
   errors:
     no-islands: "&r&c ¡No hay islas para visitar en [gamemode]!"
     noone-is-online: "&r &c ¡Nadie de esta isla está en línea!"
-    not-enough-credits: "&r &c No tienes suficientes créditos para visitar esta
-      isla. [Número] créditos necesarios."
-    not-enough-credits-bank: "&r&c No tienes suficiente dinero en tu cuenta bancaria.
-      Gastos de visita &l&4 $[number]."
-    cannot-withdraw-credits: "&r &c ¡No se puede retirar [número] de su cuenta!
-      Se cancela la operación."
-    cannot-deposit-credits: "&r &c ¡No se puede depositar [número] en la cuenta
-      del propietario de la isla! Se cancela la operación."
+    not-enough-credits: "&r &c No tienes suficientes créditos para visitar esta isla.  [number] créditos necesarios."
+    not-enough-credits-bank: "&r&c No tienes suficiente dinero en tu cuenta bancaria. Gastos de visita &l&4 $[number]."
+    cannot-withdraw-credits: "&r &c ¡No se puede retirar [number] de su cuenta! Se cancela la operación."
+    cannot-deposit-credits: "&r &c ¡No se puede depositar [number] en la cuenta del propietario de la isla! Se cancela la operación."
     not-in-overworld: "&rv ¡Debes estar en el mundo para cambiar la ubicación de
       generación de visitantes! Se cancela la operación."
     not-in-protected-area: "&r &c ¡Debes estar en el área protegida de tu isla!
@@ -227,23 +223,19 @@ visit:
     exit-string: cancelar, salir, salir
     cancelled: "&c ¡Conversación cancelada!"
     prefix: "&l &6 [BentoBox]: &r"
-    numeric-only: "&c ¡El [valor] dado no es un número!"
-    not-valid-value: "&c El número [value] proporcionado no es válido. ¡Debe ser
-      mayor que [min] y menor que [max]!"
-    write-search: "&e Escriba un valor de búsqueda. (escriba 'cancelar' para salir)"
+    numeric-only: "&c ¡El [value] dado no es un número!"
+    not-valid-value: "&c El número [value] proporcionado no es válido. ¡Debe ser mayor que [min] y menor que [max]!"
+    write-search: "&e Escriba un valor de búsqueda. (escriba 'cancel' para salir)"
     search-updated: "&a Valor de búsqueda actualizado."
     input-number: "&e Introduzca un número en el chat."
-    confirm-island-data-deletion: "&e Confirme que desea eliminar todos los datos
-      de usuario de la base de datos para [gamemode]."
+    confirm-island-data-deletion: "&e Confirme que desea eliminar todos los datos de usuario de la base de datos para [gamemode]."
     user-data-removed: "&¡Éxito, se eliminaron todos los datos de usuario de [gamemode]!"
     spawn-point-updated: "&a Éxito, ¡el punto de spawn ha cambiado!"
     visit-payment: "&e Visitar la isla de [owner] costará &l &6 $ [payment]."
     visit-paid: "&e Usted pagó &l&6 $[payment] &r&e por visitar a &l&6 [owner] &r&e."
-    visit-paid-bank: "&e Usted pagó &l&6 $[payment] &r&e de su cuenta bancaria por
-      visitar a&l&6 [owner] &r&e."
+    visit-paid-bank: "&e Usted pagó &l&6 $[payment] &r&e de su cuenta bancaria por visitar a&l&6 [owner] &r&e."
     visit-earn: "&l&6 [player] &r&e te pagó &l&6 $[payment] &r&e por visitar tu isla."
-    visit-earn-bank: "&l&6 [player] &r&e deposito en su banco &l&6 $[payment] &r&e
-      por visitar su isla."
+    visit-earn-bank: "&l&6 [player] &r&e deposito en su banco &l&6 $[payment] &r&e por visitar su isla."
     player-visiting-island: "&e El jugador &l&6 [player] &r&e visitó tu isla."
     player-leaves-island: "&e El jugador &l&6 [player] &r&e abandonó tu isla."
 protection:
