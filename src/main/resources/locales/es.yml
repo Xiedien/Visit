@@ -45,11 +45,11 @@ visit:
       island:
         name: "&f &l [name]"
         description: |-
-          [dueño]
-          [miembros]
-          [nadie en línea]
-          [pago]
-          [sin visita]
+          [owner]  
+          [members]
+          [nobody online]
+          [payment]
+          [no visit] 
         owner: "&7 &l Propietario: &r &b [player]"
         members-title: "&7 &l Miembros:"
         member: "&b - [player]"
